@@ -18,8 +18,8 @@ int main()
     TTferraduras = cavalos * 4;
     valorTT = TTferraduras * valorF;
 
-    printf("quantidade de ferraduras necessarias: %i", TTferraduras);
-    printf("Valor total da compra das ferraduras: R$%.2f", valorTT);
+    printf("\nquantidade de ferraduras necessarias: %i", TTferraduras);
+    printf("\nValor total da compra das ferraduras: R$%.2f", valorTT);
 
 
     return 0;

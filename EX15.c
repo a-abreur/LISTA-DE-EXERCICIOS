@@ -3,30 +3,37 @@
 
 int main()
 {
-    int numero;
-    int milhar;
-    int centena;
-    int dezena;
-    int unidade;
+    int horas_N;
+    int horas_E;
+    int dependentes;
+    float P_horasN;
+    float P_horasE;
+    float P_dependentes;
+    float P_liquido;
+    float P_final;
 
-    printf("digite um numero: ");
-    scanf("%i", &numero);
+    printf("Digite a quantidade total de horas normais: ");
+    scanf("%i", &horas_N);
 
-    milhar = numero / 1000;
-    milhar = (int)milhar;
+    printf("Digite a quantidade total de horas extras: ");
+    scanf("%i", &horas_E);
 
-    centena = numero - (milhar*1000);
-    centena = (int) centena/100;
+    printf("Digite a quantidade total de dependentes menores de 6 anos: ");
+    scanf("%i", &dependentes);
 
-    dezena = numero - ((milhar*1000)+(centena*100));
-    dezena = (int) dezena/10;
+    P_horasN = horas_N*10;
+    P_horasE = horas_E*15;
+    P_dependentes = dependentes*90;
+    P_liquido = P_horasN - (P_horasN*0.11);
+    P_final = P_liquido+P_horasE+P_dependentes;
 
-    unidade = numero - ((milhar*1000)+(centena*100)+(dezena*10));
-    unidade = (int) unidade;
+    printf("\nHoras normais: R$%.2f", P_horasN);
+    printf("\nHoras extras: R$%.2f", P_horasE);
+    printf("\nAdicional dependentes: R$%.2f", P_dependentes);
+    printf("\nSalario liquido: R$%.2f", P_liquido);
+    printf("\nSalario final: R$%.2f", P_final);
 
 
-
-    printf("milhar: %i\ndezena: %i\ncentena: %i\nunidade: %i", milhar, centena,dezena , unidade);
 
 
 
